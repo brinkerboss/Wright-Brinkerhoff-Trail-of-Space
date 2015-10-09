@@ -14,10 +14,10 @@ import java.util.Objects;
  */
 public class inventory implements Serializable{
     
-    private int quantity
-    private String itemType
-    private int itemPoints
-    private int inventoryLimit
+    private int quantity;
+    private String itemType;
+    private int itemPoints;
+    private int inventoryLimit;
 
     public int getQuantity() {
         return quantity;
