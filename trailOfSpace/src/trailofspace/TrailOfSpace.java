@@ -13,7 +13,6 @@ import byui.cit260.trailOfSpace.model.MathTrap;
 import byui.cit260.trailOfSpace.model.inventory;
 import byui.cit260.trailOfSpace.model.Spaceship;
 
-
 /**
  *
  * @author animejedifreak
