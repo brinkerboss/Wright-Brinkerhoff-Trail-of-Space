@@ -17,7 +17,7 @@ public class Character implements Serializable{
     private String name;
     private int health;
     private int attack;
-    private int defense;
+    
     
 
     public Character() {
@@ -58,17 +58,11 @@ public class Character implements Serializable{
         this.attack = attack;
     }
 
-    public int getDefense() {
-        return defense;
-    }
-
-    public void setDefense(int defense) {
-        this.defense = defense;
-    }
+    
 
     @Override
     public String toString() {
-        return "Character{" + "type=" + type + ", name=" + name + ", health=" + health + ", attack=" + attack + ", defense=" + defense + '}';
+        return "Character{" + "type=" + type + ", name=" + name + ", health=" + health + ", attack=" + attack + '}';
     }
 
     @Override
@@ -78,7 +72,7 @@ public class Character implements Serializable{
         hash = 11 * hash + Objects.hashCode(this.name);
         hash = 11 * hash + this.health;
         hash = 11 * hash + this.attack;
-        hash = 11 * hash + this.defense;
+        
         return hash;
     }
 
@@ -103,9 +97,7 @@ public class Character implements Serializable{
         if (this.attack != other.attack) {
             return false;
         }
-        if (this.defense != other.defense) {
-            return false;
-        }
+        
         return true;
     }
     

@@ -39,7 +39,7 @@ public class TrailOfSpace {
         characterOne.setType("hero");
         characterOne.setHealth(20);
         characterOne.setAttack(5);
-        characterOne.setDefense(5);
+        
         
         String characterInfo = characterOne.toString();
         System.out.println(characterInfo);
