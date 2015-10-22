@@ -11,33 +11,34 @@ package byui.cit260.trailOfSpace.control;
  */
 public class BattleControl {
     
-    int characterHealth;
-    int characterAttack;
-    int enemyHealth;
-    int enemyAttack;
+    
     
     public int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) {
         
         if ((characterHealth > 999 || enemyHealth > 999) || (characterHealth < 1 || enemyHealth < 1)) {  
 
-            return -1;
+            return -1; // health for character or enemy is out of bounds
         }
         if ((characterAttack > 499 || enemyAttack > 499) || (characterAttack < 1 || enemyAttack < 1)) {
 
-            return -2;
+            return -2; //attack for character or enemy is out of bounds
         }
-        //if (isNotInt)
+        
+        if (characterAttack != (int)characterAttack || characterHealth != (int)characterHealth || enemyAttack != (int)enemyAttack || enemyHealth != (int)enemyHealth) { //validate input
+   
+        return -3;
+        }
 
-          //  return -3;
+          
 
         int outcome = ((enemyHealth / characterAttack) - (characterHealth / enemyAttack));
 
         if (outcome < 0) {
 	
-	return -4;
+	return -4; //player's character will win the battle
         }
         else {
-	return -5;
+	return -5; //enemy will win the battle
                 }
         
     }

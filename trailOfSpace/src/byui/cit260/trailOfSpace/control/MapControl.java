@@ -11,7 +11,7 @@ package byui.cit260.trailOfSpace.control;
  */
 public class MapControl {
     
-    public move(ship, position){
+    public void move(ship, position){
     
     }
     
