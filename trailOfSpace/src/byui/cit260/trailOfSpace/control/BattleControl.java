@@ -18,27 +18,28 @@ public class BattleControl {
     
     public int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) {
         
-        if ((characterHealth || enemyHealth > 999) || (characterHealth || enemyHealth < 1))  
+        if ((characterHealth > 999 || enemyHealth > 999) || (characterHealth < 1 || enemyHealth < 1)) {  
 
             return -1;
-
-        if (characterAttack || enemyAttack > 499 || characterAttack || enemyAttack < 1)
+        }
+        if ((characterAttack > 499 || enemyAttack > 499) || (characterAttack < 1 || enemyAttack < 1)) {
 
             return -2;
+        }
+        //if (isNotInt)
 
-        if (isNotInt)
+          //  return -3;
 
-            return -3;
+        int outcome = ((enemyHealth / characterAttack) - (characterHealth / enemyAttack));
 
-        int outcome = (enemyHealth / characterAttack) – (characterHealth / enemyAttack)
-
-        if (outcome < 0)
+        if (outcome < 0) {
 	
 	return -4;
-
-        else
+        }
+        else {
 	return -5;
-
+                }
+        
     }
     
 }
