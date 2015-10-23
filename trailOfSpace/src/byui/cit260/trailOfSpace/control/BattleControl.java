@@ -37,8 +37,11 @@ public class BattleControl {
 	
 	return -4; //player's character will win the battle
         }
+        if (outcome == 0) {
+            return -5;
+        }
         else {
-	return -5; //enemy will win the battle
+	return -6; //enemy will win the battle
                 }
         
     }
