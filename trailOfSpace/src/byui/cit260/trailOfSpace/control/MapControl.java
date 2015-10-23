@@ -11,8 +11,41 @@ package byui.cit260.trailOfSpace.control;
  */
 public class MapControl {
     
-    public void move(int ship, int position){
+    public void move(int shipPosition){
     
     }
     
+    public boolean validLocation(String characterLocation, String position) {
+        boolean isValid = false;
+        
+        return isValid;
+    }
+    
+    public boolean visitInhabitableLocation(String characterLocation) {
+        
+        boolean isValid = false;
+        
+        return isValid;
+    }
+    
+    public boolean visitItemLocation(String characterLocation) {
+        
+        boolean isValid = false;
+        
+        return isValid;
+    }
+    
+    public boolean visitEnemyLocation(String characterLocation) {
+        
+        boolean isValid = false;
+        
+        return isValid;
+    }
+    
+    public boolean visitMathLocation(String characterLocation) {
+        
+        boolean isValid = false;
+        
+        return isValid;
+    }
 }

@@ -11,6 +11,29 @@ package byui.cit260.trailOfSpace.control;
  */
 public class BattleControl {
     
+    public int characterAttack(int health, int attack) {
+        
+        health -= attack;
+        return health;
+    }
+    
+    public int characterDefend(int health, int increaseAmount) {
+    
+        health += increaseAmount;
+        return health;
+    }
+    
+    public int enemyAttack(int health, int attack) {
+    
+        health -= attack;
+        return health;
+    }
+    
+    public int enemyDefend(int health, int increaseAmount) {
+    
+        health += increaseAmount;
+        return health;
+    }
     
     
     public int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) {
