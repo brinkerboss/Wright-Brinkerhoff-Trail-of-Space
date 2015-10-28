@@ -12,6 +12,7 @@ import byui.cit260.trailOfSpace.model.Location;
 import byui.cit260.trailOfSpace.model.MathTrap;
 import byui.cit260.trailOfSpace.model.inventory;
 import byui.cit260.trailOfSpace.model.Spaceship;
+import byui.cit260.trailOfSpace.view.StartProgramView;
 
 /**
  *
@@ -23,7 +24,7 @@ public class TrailOfSpace {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        /**
         Player playerOne = new Player();
         
         playerOne.setName("Fred");
@@ -68,10 +69,10 @@ public class TrailOfSpace {
         
         String mathTrapInfo = mathTrapOne.toString();
         System.out.println(mathTrapInfo);
+        */
         
-        
-        
-        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
     }
     
 }
