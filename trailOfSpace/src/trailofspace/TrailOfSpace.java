@@ -73,6 +73,7 @@ public class TrailOfSpace {
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
+        
     }
     
 }

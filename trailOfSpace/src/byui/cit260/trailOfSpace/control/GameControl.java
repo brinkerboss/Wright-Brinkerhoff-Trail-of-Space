@@ -5,11 +5,21 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import byui.cit260.trailOfSpace.model.Player;
+
 /**
  *
  * @author landonwright
  */
 public class GameControl {
+    
+    
+
+    public static Player createPlayer(String playersName) {
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** createPlayer function called ***");
+        return null;
+    }
     
     
     public void startNewGame(){
