@@ -12,11 +12,11 @@ package byui.cit260.trailOfSpace.control;
 public class InventoryControl {
   
     
-    public void addToInventory(string inventoryItem, int amount) {
+    public void addToInventory(String inventoryItem, int amount) {
 
     }
     
-    public void removeFromInventory(string inventoryItem, int amount) {
+    public void removeFromInventory(String inventoryItem, int amount) {
         
     }
     
