@@ -5,6 +5,8 @@
  */
 package byui.cit260.trailOfSpace.view;
 
+import byui.cit260.trailOfSpace.control.GameControl;
+import byui.cit260.trailOfSpace.model.Player;
 import java.util.Scanner;
 
 /**
@@ -18,6 +20,10 @@ public class StartProgramView {
         this.displayBanner();
         
         String playersName = this.getPlayersName();
+        
+        Player player = GameControl.createPlayer(playersName);
+        
+        this.displayWelcomeMessage(player);
     }
 
     private void displayBanner() {
@@ -55,7 +61,17 @@ public class StartProgramView {
         }
         return playersName;
     }
+
+    private void displayWelcomeMessage(Player player) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n\n=============================================");
+        System.out.println("\tWelcome to the game" + player.getName());
+        System.out.println("\tWe hope you have a lot of fun!");
+        System.out.println("=============================================");
+        
+    }
     
     
     
 }
+
