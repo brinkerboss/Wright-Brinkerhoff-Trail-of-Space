@@ -8,6 +8,7 @@ package trailofspace;
 import byui.cit260.trailOfSpace.model.Battle;
 import byui.cit260.trailOfSpace.model.Player;
 import byui.cit260.trailOfSpace.model.Character;
+import byui.cit260.trailOfSpace.model.Game;
 import byui.cit260.trailOfSpace.model.Location;
 import byui.cit260.trailOfSpace.model.MathTrap;
 import byui.cit260.trailOfSpace.model.inventory;
@@ -19,11 +20,34 @@ import byui.cit260.trailOfSpace.view.StartProgramView;
  * @author animejedifreak
  */
 public class TrailOfSpace {
+    
+    
+    private static Game currentGame = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        TrailOfSpace.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        TrailOfSpace.player = player;
+    }
+        private static Player player = null;
+        
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+    
         /**
         Player playerOne = new Player();
         
