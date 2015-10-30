@@ -43,7 +43,7 @@ public class InventoryControlTest {
     @Test
     public void testAddToInventory() {
         System.out.println("addToInventory");
-        string inventoryItem = null;
+        String inventoryItem = null;
         int amount = 0;
         InventoryControl instance = new InventoryControl();
         instance.addToInventory(inventoryItem, amount);
@@ -57,7 +57,7 @@ public class InventoryControlTest {
     @Test
     public void testRemoveFromInventory() {
         System.out.println("removeFromInventory");
-        string inventoryItem = null;
+        String inventoryItem = null;
         int amount = 0;
         InventoryControl instance = new InventoryControl();
         instance.removeFromInventory(inventoryItem, amount);
@@ -71,9 +71,9 @@ public class InventoryControlTest {
     @Test
     public void testGetInventoryList() {
         System.out.println("getInventoryList");
-        list inventoryItems = null;
+        String inventoryItems = null;
         InventoryControl instance = new InventoryControl();
-        instance.getInventoryList(inventoryItems);
+        //instance.getInventoryList(inventoryItems);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

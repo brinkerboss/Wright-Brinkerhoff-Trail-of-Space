@@ -20,8 +20,8 @@ public class InventoryControl {
         
     }
     
-    public void getInventoryList(list inventoryItems) {
+    //public void getInventoryList(list inventoryItems) {
     
-    }
+    //}
     
 }
