@@ -5,26 +5,22 @@
  */
 package byui.cit260.trailOfSpace.view;
 
-import byui.cit260.trailOfSpace.control.GameControl;
 import java.util.Scanner;
-import trailofspace.TrailOfSpace;
 
 /**
  *
  * @author animejedifreak
  */
-public class MainMenuView {
-    
-    HelpMenuView helpMenu = new HelpMenuView();
-    
+public class HelpMenuView {
     
     private final String MENU = "\n"
             + "\n-----------------------------------------------------"
-            + "\n| Main Menu                                          |"
+            + "\n| Help Menu                                          |"
             + "\n-----------------------------------------------------"
-            + "\nG - Start game"
-            + "\nH - Get help on how to play the game"
-            + "\nS - Save Game"
+            + "\nG - What is the goal of the game?"
+            + "\nM - How to move"
+            + "\nU - How to upgrade"
+            + "\nQ - Quit"
             + "\n-----------------------------------------------------"
             + "\n"
             + "Enter your selection below";
@@ -42,7 +38,7 @@ public class MainMenuView {
             
             this.doAction(selection);
             
-        } while (selection != 'E');
+        } while (selection != 'Q');
         
     }
    
@@ -60,7 +56,7 @@ public class MainMenuView {
           input = input.toUpperCase();
           input = input.trim();
         
-          if (input.length() < 1) {
+          if (input.length() < 2) {
              System.out.println("Invalid - please enter a valid letter");
              continue;
         
@@ -74,50 +70,20 @@ public class MainMenuView {
     public void doAction(char choice) {
         
         switch (choice) {
-            case 'N':
-                this.startNewGame();
-                break;
             case 'G':
-                this.startExistingGame();
+                System.out.println("");
                 break;
-            case 'H':
-                helpMenu.displayMenu();
+            case 'M':
+                System.out.println("");
                 break;
-            case 'S':
-                this.saveGame();
+            case 'U':
+                System.out.println("");
                 break;
-            case 'E':
+            case 'Q':
                 return;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
     }
-
-    private void startNewGame() {
-        //create a new game
-        GameControl.createNewGame(TrailOfSpace.getPlayer());
-        
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-    
-
-    private void startExistingGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void saveGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-
-
-
 }
