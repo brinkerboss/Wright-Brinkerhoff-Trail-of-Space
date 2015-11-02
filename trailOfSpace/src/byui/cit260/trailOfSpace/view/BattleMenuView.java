@@ -5,22 +5,24 @@
  */
 package byui.cit260.trailOfSpace.view;
 
+import byui.cit260.trailOfSpace.control.BattleControl;
 import java.util.Scanner;
 
 /**
  *
  * @author animejedifreak
  */
-public class HelpMenuView {
+public class BattleMenuView {
+    
+    BattleControl battleControl = new BattleControl();
     
     private final String MENU = "\n"
             + "\n-----------------------------------------------------"
-            + "\n| Help Menu                                          |"
+            + "\n| Battle Menu                                          |"
             + "\n-----------------------------------------------------"
-            + "\nG - What is the goal of the game?"
-            + "\nM - How to move"
-            + "\nU - How to upgrade"
-            + "\nQ - Quit"
+            + "\nA - Attack"
+            + "\nD - Defend"
+            + "\nP - Predict outcome"
             + "\n-----------------------------------------------------"
             + "\n"
             + "Enter your selection below";
@@ -70,16 +72,16 @@ public class HelpMenuView {
     public void doAction(char choice) {
         
         switch (choice) {
-            case 'G':
+            case 'A':
+                battleControl.characterAttack(health, attack);
+                break;
+            case 'D':
                 System.out.println("");
                 break;
-            case 'M':
+            case 'P':
                 System.out.println("");
                 break;
-            case 'U':
-                System.out.println("");
-                break;
-            case 'Q':
+            case ' ':
                 return;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");

@@ -54,7 +54,7 @@ public class MainMenuView {
         
         while(!valid) {
             
-            System.out.println("Please enter a letter from the menu");
+            
             
           input = keyboard.nextLine();
           input = input.toUpperCase();
