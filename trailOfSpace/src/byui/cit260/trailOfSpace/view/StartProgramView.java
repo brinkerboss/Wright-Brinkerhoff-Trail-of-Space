@@ -5,6 +5,7 @@
  */
 package byui.cit260.trailOfSpace.view;
 
+import byui.cit260.trailOfSpace.control.BattleControl;
 import byui.cit260.trailOfSpace.control.GameControl;
 import byui.cit260.trailOfSpace.model.Player;
 import java.util.Scanner;
@@ -33,6 +34,8 @@ public class StartProgramView {
         //display the main menu 
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayMenu();
+        
+        BattleControl battleController = new BattleControl();
     }
 
     private void displayBanner() {

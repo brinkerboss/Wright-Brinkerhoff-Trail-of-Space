@@ -11,10 +11,12 @@ package byui.cit260.trailOfSpace.control;
  */
 public class BattleControl {
     
-    public int characterAttack(int health, int attack) {
+    public void characterAttack() {
+       // int health = enemy.getHealth();
+       // int attack = hero.getAttack(;
+       // health -= attack;
+       //enemy.setHealth(health); 
         
-        health -= attack;
-        return health;
     }
     
     public int characterDefend(int health, int increaseAmount) {

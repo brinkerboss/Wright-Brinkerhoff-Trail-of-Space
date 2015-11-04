@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class BattleMenuView {
     
-    BattleControl battleControl = new BattleControl();
+    BattleControl battleController = new BattleControl();
     
     private final String MENU = "\n"
             + "\n-----------------------------------------------------"
@@ -73,13 +73,13 @@ public class BattleMenuView {
         
         switch (choice) {
             case 'A':
-                battleControl.characterAttack(health, attack);
+                //battleController.characterAttack(health, attack);
                 break;
             case 'D':
-                System.out.println("");
+                //battleController.characterDefend(health, increaseAmonut);
                 break;
             case 'P':
-                System.out.println("");
+                battleController.calcOutcome(choice, choice, choice, choice);
                 break;
             case ' ':
                 return;
