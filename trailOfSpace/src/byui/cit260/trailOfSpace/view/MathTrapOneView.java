@@ -11,20 +11,18 @@ import java.util.Scanner;
  *
  * @author landonwright
  */
-public class MathTrapView {
+public class MathTrapOneView {
     
-    public void MathViewOne() {
     
-        viewOneDisplay();
-              
-    
-    }
-        public void viewOneDisplay() {
+        public void displayMathTrap() {
     
             System.out.println("You have encountered an Ancient Alien Math Trap!");
             System.out.println("You must solve the math problem in order to procede.");
             System.out.println("Enter the solution to the following equation:");
             System.out.println("17 – 30 + 41");
+            
+            
+            
         }
     
     public String getInput() {

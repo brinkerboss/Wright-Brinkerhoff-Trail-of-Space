@@ -11,7 +11,7 @@ package byui.cit260.trailOfSpace.control;
  */
 public class BattleControl {
     
-    public void characterAttack() {
+    public static void characterAttack() {
        // int health = enemy.getHealth();
        // int attack = hero.getAttack(;
        // health -= attack;
@@ -19,26 +19,26 @@ public class BattleControl {
         
     }
     
-    public int characterDefend(int health, int increaseAmount) {
+    public static void characterDefend() {
     
-        health += increaseAmount;
-        return health;
+       // health += increaseAmount;
+       // return health;
     }
     
-    public int enemyAttack(int health, int attack) {
+    public static int enemyAttack(int health, int attack) {
     
         health -= attack;
         return health;
     }
     
-    public int enemyDefend(int health, int increaseAmount) {
+    public static int enemyDefend(int health, int increaseAmount) {
     
         health += increaseAmount;
         return health;
     }
     
     
-    public int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) {
+    public static int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) {
         
         if ((characterHealth > 999 || enemyHealth > 999) || (characterHealth < 1 || enemyHealth < 1)) {  
 
