@@ -5,10 +5,53 @@
  */
 package byui.cit260.trailOfSpace.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author landonwright
  */
 public class MathTrapView {
     
+    public void MathViewOne() {
+    
+        viewOneDisplay();
+              
+    
+    }
+        public void viewOneDisplay() {
+    
+            System.out.println("You have encountered an Ancient Alien Math Trap!");
+            System.out.println("You must solve the math problem in order to procede.");
+            System.out.println("Enter the solution to the following equation:");
+            System.out.println("17 – 30 + 41");
+        }
+    
+    public String getInput() {
+            boolean valid = false;
+            Scanner keyboard = new Scanner(System.in);
+        
+            String input = null;
+        
+            while(!valid) {
+            
+           
+                input = keyboard.nextLine();
+                input = input.toUpperCase();
+                input = input.trim();
+        
+                int solution = Integer.parseInt(input);
+          
+                if (solution != 28) {
+                    System.out.println("Incorrect answer, please try again.");
+                continue;
+        
+                }
+            break;
+        
+            }
+            return input;
+        }
+ 
+
 }
