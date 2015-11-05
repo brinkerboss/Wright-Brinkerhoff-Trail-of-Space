@@ -6,6 +6,7 @@
 package byui.cit260.trailOfSpace.view;
 
 import byui.cit260.trailOfSpace.control.BattleControl;
+import static byui.cit260.trailOfSpace.control.BattleControl.characterAttack;
 import java.util.Scanner;
 
 /**
@@ -79,7 +80,7 @@ public class BattleMenuView {
                 BattleControl.characterDefend();
                 break;
             case 'P':
-                BattleControl.calcOutcome(choice, choice, choice, choice);
+                BattleControl.battle();
                 break;
             case ' ':
                 return;

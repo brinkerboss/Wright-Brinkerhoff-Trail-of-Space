@@ -21,7 +21,7 @@ public class MathTrapOneView {
             System.out.println("Enter the solution to the following equation:");
             System.out.println("17 – 30 + 41");
             
-            
+            getInput();
             
         }
     

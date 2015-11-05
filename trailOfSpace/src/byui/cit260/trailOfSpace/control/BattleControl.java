@@ -11,6 +11,34 @@ package byui.cit260.trailOfSpace.control;
  */
 public class BattleControl {
     
+    public static void battle() {
+    
+        int characterHealth;
+        int characterAttack;
+        int enemyHealth;
+        int enemyAttack;
+        int result = calcOutcome(int characterHealth, int characterAttack, int enemyHealth, int enemyAttack);
+        
+        switch (result) {
+            case -1:
+                System.out.println("Health is out of bounds");
+                break;
+            case -2:
+                System.out.println("Attack is out of bounds");
+                break;
+            case -4:
+                System.out.println("Character will win the battle!");
+                break;
+            case -5:
+                System.out.println("The enemy will win the battle!");
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                break;
+        }
+    
+    }
+    
     public static void characterAttack() {
        // int health = enemy.getHealth();
        // int attack = hero.getAttack(;
