@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author animejedifreak
  */
 public class BattleMenuView {
-    
+    BattleControl instance = new BattleControl();
     
     
     private final String MENU = "\n"
