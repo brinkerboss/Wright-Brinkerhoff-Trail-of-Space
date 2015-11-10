@@ -17,7 +17,7 @@ public class BattleControl {
         int characterAttack;
         int enemyHealth;
         int enemyAttack;
-        int result = calcOutcome(characterHealth, characterAttack, enemyHealth, enemyAttack);
+        int result = this.calcOutcome(characterHealth, characterAttack, enemyHealth, enemyAttack);
         
         switch (result) {
             case -1:
