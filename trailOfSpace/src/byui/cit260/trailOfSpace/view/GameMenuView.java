@@ -33,7 +33,7 @@ public class GameMenuView {
     private GameMenuView New;
             
 
-    public void displayMenu() {
+    public void display() {
         
         char selection = ' ';
         do {
