@@ -13,11 +13,12 @@ import java.util.Scanner;
  *
  * @author animejedifreak
  */
-public class BattleMenuView {
+public class BattleMenuView extends View {
     BattleControl instance = new BattleControl();
     
     
-    private final String MENU = "\n"
+    public BattleMenuView() {
+        super ("\n"
             + "\n-----------------------------------------------------"
             + "\n| Battle Menu                                          |"
             + "\n-----------------------------------------------------"
@@ -26,51 +27,18 @@ public class BattleMenuView {
             + "\nP - Predict outcome"
             + "\n-----------------------------------------------------"
             + "\n"
-            + "Enter your selection below";
+            + "Enter your selection below");
+    }
     private GameMenuView New;
             
 
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            System.out.println(MENU);
-      
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-            
-        } while (selection != 'Q');
-        
-    }
    
-    public String getInput() {
-        boolean valid = false;
-        Scanner keyboard = new Scanner(System.in);
-        
-        String input = null;
-        
-        while(!valid) {
-            
-            
-            
-          input = keyboard.nextLine();
-          input = input.toUpperCase();
-          input = input.trim();
-        
-          if (input.length() < 1) {
-             System.out.println("Invalid - please enter a valid letter");
-             continue;
-        
-          }
-          break;
-        
-        }
-    return input;
-    }
     
-    public void doAction(char choice) {
+    @Override
+    public boolean doAction(Object obj) {
+        String value = (String) obj;
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
         
         switch (choice) {
             case 'A':
@@ -83,10 +51,12 @@ public class BattleMenuView {
                 BattleControl.battle();
                 break;
             case ' ':
-                return;
+                return false;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
+        return true;
     }
+    
 }

@@ -48,7 +48,7 @@ public class MainMenuView extends View {
                 this.startExistingGame();
                 break;
             case 'H':
-                helpMenu.displayMenu();
+                helpMenu.display();
                 break;
             case 'S':
                 this.saveGame();
