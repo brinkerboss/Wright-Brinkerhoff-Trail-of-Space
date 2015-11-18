@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author landonwright
  */
-public class inventory implements Serializable{
+public class Inventory implements Serializable{
     
     private int quantity;
     private String itemType;
@@ -56,7 +56,7 @@ public class inventory implements Serializable{
         return "inventory{" + "quantity=" + quantity + ", itemType=" + itemType + ", itemPoints=" + itemPoints + ", inventoryLimit=" + inventoryLimit + '}';
     }
 
-    public inventory() {
+    public Inventory() {
     }
 
     @Override
@@ -77,7 +77,7 @@ public class inventory implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final inventory other = (inventory) obj;
+        final Inventory other = (Inventory) obj;
         if (this.quantity != other.quantity) {
             return false;
         }

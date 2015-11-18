@@ -7,7 +7,7 @@ package trailofspace;
 
 import byui.cit260.trailOfSpace.model.Battle;
 import byui.cit260.trailOfSpace.model.Player;
-import byui.cit260.trailOfSpace.model.Character;
+import byui.cit260.trailOfSpace.model.Actor;
 import byui.cit260.trailOfSpace.model.Game;
 import byui.cit260.trailOfSpace.model.Location;
 import byui.cit260.trailOfSpace.model.MathTrap;
