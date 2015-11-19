@@ -18,7 +18,25 @@ public class Location implements Serializable{
     private char column;
     private String visited;
     private String locationType;
+    private Battle battle;
+    private MathTrap mathtrap;
 
+    public MathTrap getMathtrap() {
+        return mathtrap;
+    }
+
+    public void setMathtrap(MathTrap mathtrap) {
+        this.mathtrap = mathtrap;
+    }
+
+    public Battle getBattle() {
+        return battle;
+    }
+
+    public void setBattle(Battle battle) {
+        this.battle = battle;
+    }
+    
     
     
     public Location() {

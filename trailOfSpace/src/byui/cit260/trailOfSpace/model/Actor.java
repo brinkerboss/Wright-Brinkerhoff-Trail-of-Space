@@ -24,7 +24,7 @@ public enum Actor implements Serializable {
     private final Point coordinates;
     
     
-    private  int health;
+    private int health;
     private int attack;
     
     

@@ -11,7 +11,7 @@ import byui.cit260.trailOfSpace.model.Actor;
 import byui.cit260.trailOfSpace.model.Game;
 import byui.cit260.trailOfSpace.model.Location;
 import byui.cit260.trailOfSpace.model.MathTrap;
-import byui.cit260.trailOfSpace.model.inventory;
+import byui.cit260.trailOfSpace.model.Inventory;
 import byui.cit260.trailOfSpace.model.Spaceship;
 import byui.cit260.trailOfSpace.view.StartProgramView;
 

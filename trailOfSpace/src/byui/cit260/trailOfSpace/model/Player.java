@@ -18,6 +18,15 @@ public class Player implements Serializable{
     
     private String name;
     private double bestTime;
+    private Actor actor;
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
 
     public Player() {
     }
