@@ -5,11 +5,24 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import byui.cit260.trailOfSpace.model.Map;
+
 /**
  *
  * @author animejedifreak
  */
 public class MapControl {
+
+    static Map createMap() {
+         
+        Map map = new Map(20, 20);
+        
+        return map;
+    }
+
+    static void moveActorsToStartingLocation(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public void move(int shipPosition){
     

@@ -14,6 +14,10 @@ import java.util.Objects;
  * @author landonwright
  */
 public class Game implements Serializable{
+
+    public static void setInventoryList(ArrayList<Inventory> inventoryList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
     private String totalTime;
     private Player player;
@@ -25,9 +29,6 @@ public class Game implements Serializable{
         return inventory;
     }
 
-    public void setInventory(ArrayList<Inventory> inventory) {
-        this.inventory = inventory;
-    }
 
     public Map getMap() {
         return map;

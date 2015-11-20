@@ -6,7 +6,10 @@
 package byui.cit260.trailOfSpace.control;
 
 import byui.cit260.trailOfSpace.model.Game;
+import byui.cit260.trailOfSpace.model.Inventory;
+import byui.cit260.trailOfSpace.model.Map;
 import byui.cit260.trailOfSpace.model.Player;
+import java.util.ArrayList;
 import trailofspace.TrailOfSpace;
 
 /**
@@ -41,7 +44,18 @@ public class GameControl {
         
         game.setPlayer(player); //save player in game
         
+        ArrayList<Inventory> inventoryList = GameControl.createInventoryList();
+        game.setInventoryList(inventoryList);
         
+        Map map = MapControl.createMap(); //create and initialize new map
+        game.setMap(map); //save map in game
+        
+        //move actors to starting position in map
+        MapControl.moveActorsToStartingLocation(map);
+    }
+
+    private static ArrayList<Inventory> createInventoryList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

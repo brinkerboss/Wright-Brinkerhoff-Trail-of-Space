@@ -13,67 +13,76 @@ import java.io.Serializable;
  */
 public class Map implements Serializable{
     
-    private int rowCount;
-    private int columnCount;
-    private Location location;
+    private int noOfRows;
+    private int noOfColumns;
+    private Location[][] locations;
 
-    public Location getLocation() {
-        return location;
+    public Map(int noOfRows, int noOfColumns) {
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println("The number of rows and columns must be greater than zero.");
+        return;
+        }
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        //create 2D array of location objects
+        this.locations = new Location[noOfRows][noOfColumns];
+        
+        for (int row = 0; row < noOfRows; row++) {
+            for(int column = 0; column < noOfColumns; column++){
+                //create and intialize new Location object instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                //asign the Location object to the current position in the array
+                locations[row][column] = location;
+            }
+        }
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    
+
+    public Location[][] getLocations() {
+        return locations;
     }
 
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+
+    public int getNoOfColumns() {
+        return noOfColumns;
+    }
+
+    public void setNoOfColumns(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
+    }
+    
+
+    
     public int getRowCount() {
-        return rowCount;
+        return noOfRows;
     }
 
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
+    public void setRowCount(int noOfRows) {
+        this.noOfRows = noOfRows;
     }
 
-    public int getColumnCount() {
-        return columnCount;
-    }
-
-    public void setColumnCount(int columnCount) {
-        this.columnCount = columnCount;
-    }
+    
 
     public Map() {
+        
+        
     }
 
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "rowCount=" + noOfRows + ", columnCount=" + noOfColumns + '}';
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + this.rowCount;
-        hash = 79 * hash + this.columnCount;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Map other = (Map) obj;
-        if (this.rowCount != other.rowCount) {
-            return false;
-        }
-        if (this.columnCount != other.columnCount) {
-            return false;
-        }
-        return true;
-    }
+    
     
     
     

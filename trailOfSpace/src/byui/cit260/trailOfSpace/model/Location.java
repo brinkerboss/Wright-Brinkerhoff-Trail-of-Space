@@ -15,8 +15,8 @@ import java.util.Objects;
 public class Location implements Serializable{
     
     private int row;
-    private char column;
-    private String visited;
+    private int column;
+    private boolean visited;
     private String locationType;
     private Battle battle;
     private MathTrap mathtrap;
@@ -51,19 +51,19 @@ public class Location implements Serializable{
         this.row = row;
     }
 
-    public char getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(char column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 
-    public String getVisited() {
+    public boolean getVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
