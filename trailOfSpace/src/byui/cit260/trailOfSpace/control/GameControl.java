@@ -5,6 +5,7 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import byui.cit260.trailOfSpace.model.Game;
 import byui.cit260.trailOfSpace.model.Player;
 import trailofspace.TrailOfSpace;
 
@@ -34,7 +35,13 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+        
+        Game game = new Game(); //create new game 
+        TrailOfSpace.setCurrentGame(game); //save in TrailOfSpace
+        
+        game.setPlayer(player); //save player in game
+        
+        
     }
     
     

@@ -5,6 +5,8 @@
  */
 package byui.cit260.trailOfSpace.view;
 
+import static byui.cit260.trailOfSpace.model.Actor.Shepard;
+
 /**
  *
  * @author animejedifreak
@@ -16,8 +18,8 @@ public class StatsView extends View {
             + "\n-----------------------------------------------------"
             + "\n| Stats                                          |"
             + "\n-----------------------------------------------------"
-            + "\n"
-            + "\n"
+            + "\n Health:" + Shepard.getHealth()
+            + "\n Attack:" + Shepard.getAttack()
             + "\nQ - Quit"
             + "\n-----------------------------------------------------"
             + "\n");

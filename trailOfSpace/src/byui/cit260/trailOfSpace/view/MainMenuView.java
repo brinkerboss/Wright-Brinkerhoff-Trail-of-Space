@@ -22,9 +22,9 @@ public class MainMenuView extends View {
             + "\n-----------------------------------------------------"
             + "\n| Main Menu                                          |"
             + "\n-----------------------------------------------------"
-            + "\nG - Start game"
+            + "\nN - Start new game"
+            + "\nS - Start game"
             + "\nH - Get help on how to play the game"
-            + "\nS - Save Game"
             + "\n-----------------------------------------------------"
             + "\n"
             + "Enter your selection below");
@@ -44,15 +44,15 @@ public class MainMenuView extends View {
             case 'N':
                 this.startNewGame();
                 break;
-            case 'G':
+            case 'S':
                 this.startExistingGame();
                 break;
             case 'H':
                 helpMenu.display();
                 break;
-            case 'S':
-                this.saveGame();
-                break;
+           // case 'S':
+             //   this.saveGame();
+               // break;
             case 'E':
                 return false;
             default:

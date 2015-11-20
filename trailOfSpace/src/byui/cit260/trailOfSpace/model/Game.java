@@ -6,6 +6,7 @@
 package byui.cit260.trailOfSpace.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,6 +18,16 @@ public class Game implements Serializable{
     private String totalTime;
     private Player player;
     private Map map;
+    
+    ArrayList<Inventory> inventory = new ArrayList<>();
+
+    public ArrayList<Inventory> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Inventory> inventory) {
+        this.inventory = inventory;
+    }
 
     public Map getMap() {
         return map;
