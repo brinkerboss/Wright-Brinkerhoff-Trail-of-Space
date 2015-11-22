@@ -7,6 +7,7 @@ package byui.cit260.trailOfSpace.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import trailofspace.TrailOfSpace;
 
 /**
  *
@@ -80,40 +81,33 @@ public class Location implements Serializable{
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", locationType=" + locationType + '}';
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + this.row;
-        hash = 83 * hash + this.column;
-        hash = 83 * hash + Objects.hashCode(this.visited);
-        hash = 83 * hash + Objects.hashCode(this.locationType);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (this.row != other.row) {
-            return false;
-        }
-        if (this.column != other.column) {
-            return false;
-        }
-        if (!Objects.equals(this.visited, other.visited)) {
-            return false;
-        }
-        if (!Objects.equals(this.locationType, other.locationType)) {
-            return false;
-        }
-        return true;
+    private static Scene[] createScene() {
+        Game game = TrailOfSpace.getCurrentGame();
+        Scene[] scenes = new Scene[SceneType.values().length];
+        
+        Scene startingScene = new Scene();
+        startingScene.setDescription("Greetings Sentinel Shepard. Your job in this quadrant is to protect the "
+                + "inhabitants of nearby planets from those that mean them harm.  Inspect every space for enemies and destroy them!"); 
+        scenes[SceneType.start.ordinal()] = startingScene;
+        
+        Scene finishScene = new Scene();
+        finishScene.setDescription("Well done Sentinel Shepard! Your bravery has ensured the"
+                + "safety of nearby inhabitants. YOU ARE A HERO!");
+        scenes[SceneType.finish.ordinal()] = finishScene;
+        return scenes;
+        
+        
+        
     }
     
+    private static void assignScenesToLocations(Map map, Scene[] scenes) {
+        Location[][] locations = map.getLocations();
+        
+        //start point
+        locations[0][1].setScene(scenes[SceneType.start.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.finish.ordinal()]);
+        
+    }
     
     
 }

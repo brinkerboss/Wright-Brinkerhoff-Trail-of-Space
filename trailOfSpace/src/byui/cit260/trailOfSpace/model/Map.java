@@ -6,6 +6,7 @@
 package byui.cit260.trailOfSpace.model;
 
 import java.io.Serializable;
+import trailofspace.TrailOfSpace;
 
 /**
  *
@@ -81,7 +82,10 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "rowCount=" + noOfRows + ", columnCount=" + noOfColumns + '}';
     }
+    
+    
 
+    
     
     
     
