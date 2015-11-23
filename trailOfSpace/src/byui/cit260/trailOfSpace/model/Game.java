@@ -5,6 +5,8 @@
  */
 package byui.cit260.trailOfSpace.model;
 
+
+import byui.cit260.trailOfSpace.control.InventoryItem;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -15,19 +17,15 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
 
-    public static void setInventoryList(ArrayList<Inventory> inventoryList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
    
     private String totalTime;
     private Player player;
     private Map map;
     
-    ArrayList<Inventory> inventory = new ArrayList<>();
+    
 
-    public ArrayList<Inventory> getInventory() {
-        return inventory;
-    }
+    
 
 
     public Map getMap() {
@@ -62,27 +60,13 @@ public class Game implements Serializable{
         return "Game{" + "totalTime=" + totalTime + '}';
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.totalTime);
-        return hash;
+    public void setInventoryList(InventoryItem[] inventoryList) {
+        }
+
+    public InventoryItem[] getInventory() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Game other = (Game) obj;
-        if (!Objects.equals(this.totalTime, other.totalTime)) {
-            return false;
-        }
-        return true;
-    }
        
 }

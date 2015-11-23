@@ -108,6 +108,10 @@ public class Location implements Serializable{
         locations[0][2].setScene(scenes[SceneType.finish.ordinal()]);
         
     }
+
+    private void setScene(Scene scene) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
