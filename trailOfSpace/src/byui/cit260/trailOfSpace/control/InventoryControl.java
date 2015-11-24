@@ -5,6 +5,8 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import trailofspace.TrailOfSpace;
+
 /**
  *
  * @author landonwright
@@ -20,8 +22,21 @@ public class InventoryControl {
         
     }
     
-    //public void getInventoryList(list inventoryItems) {
-    
-    //}
+    public int getMostPotentItem() {
+        InventoryItem[] originalInventoryList = TrailOfSpace.getCurrentGame().getInventory();
+        
+        InventoryItem[] inventoryList = originalInventoryList.clone();
+        
+        InventoryItem maxValue = inventoryList[0];
+        
+        for (InventoryItem item : inventoryList) {
+            if (item.getItemEffectValue() > maxValue.getItemEffectValue()) {
+                maxValue = item;
+            }
+        }
+        
+     
+        return maxValue.getItemEffectValue();
+    }
     
 }

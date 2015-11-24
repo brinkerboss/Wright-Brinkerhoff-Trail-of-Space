@@ -57,7 +57,7 @@ public class GameControl {
 
     public static InventoryItem[] createInventoryList() {
     
-        InventoryItem[] inventory = new InventoryItem[2];
+        InventoryItem[] inventory = new InventoryItem[5];
         
         InventoryItem healthUpgrade = new InventoryItem();
         healthUpgrade.setDescription("Increase Max Health");
