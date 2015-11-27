@@ -6,6 +6,7 @@
 package byui.cit260.trailOfSpace.view;
 
 import byui.cit260.trailOfSpace.control.GameControl;
+import byui.cit260.trailOfSpace.control.InventoryControl;
 import byui.cit260.trailOfSpace.control.InventoryItem;
 import java.util.Scanner;
 import trailofspace.TrailOfSpace;
@@ -28,6 +29,7 @@ public class GameMenuView extends View {
             + "\nM - Move to new location"         
             + "\nU - Upgrade"
             + "\nH - Help"
+            + "\nP - Display strongest item in inventory"
             + "\nQ - Quit"
             + "\n-----------------------------------------------------"
             + "\n"
@@ -64,6 +66,9 @@ public class GameMenuView extends View {
                 break;
             case 'H':
                 ;
+                break;
+            case 'P':
+                InventoryControl.displayMostPotentItem();
                 break;
             case 'Q':
                 return false;

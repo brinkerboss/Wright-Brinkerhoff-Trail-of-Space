@@ -22,7 +22,7 @@ public class InventoryControl {
         
     }
     
-    public int getMostPotentItem() {
+    public static InventoryItem getMostPotentItem() {
         InventoryItem[] originalInventoryList = TrailOfSpace.getCurrentGame().getInventory();
         
         InventoryItem[] inventoryList = originalInventoryList.clone();
@@ -36,7 +36,14 @@ public class InventoryControl {
         }
         
      
-        return maxValue.getItemEffectValue();
+        return maxValue;
+    }
+    
+    public static void displayMostPotentItem () {
+        
+        InventoryItem item = getMostPotentItem();
+        
+        System.out.println("Your Best Item is : " + item.getDescription());
     }
     
 }
