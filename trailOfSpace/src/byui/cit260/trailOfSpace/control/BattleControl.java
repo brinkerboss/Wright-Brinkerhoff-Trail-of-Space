@@ -5,21 +5,29 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import byui.cit260.trailOfSpace.exceptions.BattleControlException;
+
 /**
  *
  * @author animejedifreak
  */
 public class BattleControl {
     
-    public static void battle() {
-    
-        int characterHealth;
+        int characterHealth = ;
         int characterAttack;
         int enemyHealth;
         int enemyAttack;
-        int result = 0;//this.calcOutcome(characterHealth, characterAttack, enemyHealth, enemyAttack);
         
-        switch (result) {
+    public static void battle() {
+    
+       
+        try {
+        this.calcOutcome(characterHealth, characterAttack, enemyHealth, enemyAttack);
+        }
+        catch (BattleControlException me){
+            System.out.println(me.getMessage());
+        }
+        /*switch (result) {
             case -1:
                 System.out.println("Health is out of bounds");
                 break;
@@ -35,7 +43,7 @@ public class BattleControl {
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
-        }
+        }*/
     
     }
     
@@ -66,21 +74,21 @@ public class BattleControl {
     }
     
     
-    public static int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) {
+    public static int calcOutcome (int characterHealth, int characterAttack, int enemyHealth, int enemyAttack) throws BattleControlException{
         
         if ((characterHealth > 999 || enemyHealth > 999) || (characterHealth < 1 || enemyHealth < 1)) {  
 
-            return -1; // health for character or enemy is out of bounds
+            throw new BattleControlException("Health is out of bounds. Please enter a valid number."); // health for character or enemy is out of bounds
         }
         if ((characterAttack > 499 || enemyAttack > 499) || (characterAttack < 1 || enemyAttack < 1)) {
 
-            return -2; //attack for character or enemy is out of bounds
+            throw new BattleControlException("Attack is out of bounds. Please enter a valid number."); //attack for character or enemy is out of bounds
         }
         
-        if (characterAttack != (int)characterAttack || characterHealth != (int)characterHealth || enemyAttack != (int)enemyAttack || enemyHealth != (int)enemyHealth) { //validate input
+        //if (characterAttack != (int)characterAttack || characterHealth != (int)characterHealth || enemyAttack != (int)enemyAttack || enemyHealth != (int)enemyHealth) { //validate input
    
-        return -3;
-        }
+        //return -3;
+        //}
 
           
 
@@ -88,13 +96,13 @@ public class BattleControl {
 
         if (outcome < 0) {
 	
-	return -4; //player's character will win the battle
+	throw new BattleControlException("The player's character will win the battle!"); //player's character will win the battle
         }
         if (outcome == 0) {
             return -5;
         }
         else {
-	return -6; //enemy will win the battle
+	throw new BattleControlException("The enemy will win the battle!"); //enemy will win the battle
                 }
         
     }
