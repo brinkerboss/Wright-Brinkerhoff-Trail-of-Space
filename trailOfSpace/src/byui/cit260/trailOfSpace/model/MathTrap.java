@@ -14,8 +14,8 @@ import java.util.Objects;
  */
 public class MathTrap implements Serializable{
     
-    private String equation;
-    private int solution;
+    private static String equation = "17 – 30 + 41";
+    private int solution = 28;
 
     public MathTrap() {
     }
@@ -41,31 +41,6 @@ public class MathTrap implements Serializable{
         return "MathTrap{" + "equation=" + equation + ", solution=" + solution + '}';
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.equation);
-        hash = 83 * hash + this.solution;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final MathTrap other = (MathTrap) obj;
-        if (!Objects.equals(this.equation, other.equation)) {
-            return false;
-        }
-        if (this.solution != other.solution) {
-            return false;
-        }
-        return true;
-    }
     
     
     

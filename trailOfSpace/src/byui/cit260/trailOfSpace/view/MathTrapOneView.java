@@ -5,6 +5,9 @@
  */
 package byui.cit260.trailOfSpace.view;
 
+import byui.cit260.trailOfSpace.control.MathTrapControl;
+import byui.cit260.trailOfSpace.exceptions.BattleControlException;
+import byui.cit260.trailOfSpace.exceptions.MathTrapControlException;
 import java.util.Scanner;
 
 /**
@@ -20,6 +23,7 @@ public class MathTrapOneView {
             System.out.println("You must solve the math problem in order to procede.");
             System.out.println("Enter the solution to the following equation:");
             System.out.println("17 – 30 + 41");
+            
             
             getInput();
             
@@ -39,13 +43,10 @@ public class MathTrapOneView {
                 input = input.trim();
         
                 int solution = Integer.parseInt(input);
-          
-                if (solution != 28) {
-                    System.out.println("Incorrect answer, please try again.");
-                continue;
+                MathTrapControl.mathTrapOne(solution);
         
-                }
-            break;
+            
+            continue;
         
             }
             return input;

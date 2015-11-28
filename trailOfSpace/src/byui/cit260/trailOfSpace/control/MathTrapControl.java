@@ -5,24 +5,28 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import byui.cit260.trailOfSpace.exceptions.MathTrapControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author animejedifreak
  */
 public class MathTrapControl {
     
-    
-    public void mathTrap0(String equation, int solution) {
-    
-        //display greeting and equation
-    
-        if(solution == 28) {
-        //print success function
-        }
-        else {
-        //print failure function and recall equation display function
+
+    public static void mathTrapOne(int solution) {
+        if(solution != 28) {
+            try {
+                throw new MathTrapControlException("Incorrect! Try again!");
+            } catch (MathTrapControlException ex) {
+                Logger.getLogger(MathTrapControl.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
+
+    
 
 
 
