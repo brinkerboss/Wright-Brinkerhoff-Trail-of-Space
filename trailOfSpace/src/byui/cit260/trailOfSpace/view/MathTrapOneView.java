@@ -25,11 +25,12 @@ public class MathTrapOneView {
             System.out.println("17 – 30 + 41");
             
             
-            getInput();
+            
+            this.getInput(solution);
             
         }
     
-    public String getInput() {
+    public String getInput(int solution) {
             boolean valid = false;
             Scanner keyboard = new Scanner(System.in);
         
@@ -42,7 +43,12 @@ public class MathTrapOneView {
                 input = input.toUpperCase();
                 input = input.trim();
         
-                int solution = Integer.parseInt(input);
+                try {
+                solution = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Error");
+                }
+                
                 MathTrapControl.mathTrapOne(solution);
         
             
