@@ -8,13 +8,16 @@ package byui.cit260.trailOfSpace.view;
 import byui.cit260.trailOfSpace.control.BattleControl;
 import byui.cit260.trailOfSpace.control.GameControl;
 import byui.cit260.trailOfSpace.model.Player;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author animejedifreak
  */
-public class StartProgramView {
+public class StartProgramView extends View {
     private String playersName;
  
     public void startProgram() {
@@ -60,13 +63,17 @@ public class StartProgramView {
         
         boolean valid = false;
         String playersName = null;
-        Scanner keyboard = new Scanner(System.in);
         
+        try {
         while(!valid){
             
             System.out.println("Enter the player's name:");
             
-            playersName = keyboard.nextLine();
+            
+                playersName = this.keyboard.readLine();
+            
+                
+            
             playersName = playersName.trim();
             
             if (playersName.length() < 2) {
@@ -75,7 +82,9 @@ public class StartProgramView {
                 
             }
             break;
-            
+        }
+            } catch (Exception e) {
+                System.out.println("Error reading input: " + e.getMessage());
         }
         return playersName;
     }

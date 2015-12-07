@@ -22,6 +22,14 @@ public enum Actor implements Serializable {
     
     private final String description;
     private final Point coordinates;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
     
     
     private int health;

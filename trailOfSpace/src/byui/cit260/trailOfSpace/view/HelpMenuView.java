@@ -39,18 +39,19 @@ public class HelpMenuView extends View {
         
         switch (choice) {
             case 'G':
-                System.out.println("");
+                this.console.println("");
                 break;
             case 'M':
-                System.out.println("");
+                this.console.println("");
                 break;
             case 'U':
-                System.out.println("");
+                this.console.println("");
                 break;
             case 'Q':
                 return false;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                            "*** Invalid selection *** Try again");
                 break;
         }
         return true;

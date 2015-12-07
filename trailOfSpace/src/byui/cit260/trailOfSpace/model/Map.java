@@ -5,6 +5,7 @@
  */
 package byui.cit260.trailOfSpace.model;
 
+import byui.cit260.trailOfSpace.view.View;
 import java.io.Serializable;
 import trailofspace.TrailOfSpace;
 
@@ -12,7 +13,7 @@ import trailofspace.TrailOfSpace;
  *
  * @author landonwright
  */
-public class Map implements Serializable{
+public class Map implements Serializable extends View {
     
     private int noOfRows;
     private int noOfColumns;
@@ -20,7 +21,7 @@ public class Map implements Serializable{
 
     public Map(int noOfRows, int noOfColumns) {
         if (noOfRows < 1 || noOfColumns < 1) {
-            System.out.println("The number of rows and columns must be greater than zero.");
+            this.console.println("The number of rows and columns must be greater than zero.");
         return;
         }
         this.noOfRows = noOfRows;

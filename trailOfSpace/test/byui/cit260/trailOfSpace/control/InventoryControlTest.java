@@ -42,7 +42,7 @@ public class InventoryControlTest {
      */
     @Test
     public void testAddToInventory() {
-        System.out.println("addToInventory");
+        this.console.println("addToInventory");
         String inventoryItem = null;
         int amount = 0;
         InventoryControl instance = new InventoryControl();
@@ -56,7 +56,7 @@ public class InventoryControlTest {
      */
     @Test
     public void testRemoveFromInventory() {
-        System.out.println("removeFromInventory");
+        this.console.println("removeFromInventory");
         String inventoryItem = null;
         int amount = 0;
         InventoryControl instance = new InventoryControl();
@@ -70,7 +70,7 @@ public class InventoryControlTest {
      */
     @Test
     public void testGetInventoryList() {
-        System.out.println("getInventoryList");
+        this.console.println("getInventoryList");
         String inventoryItems = null;
         InventoryControl instance = new InventoryControl();
         //instance.getInventoryList(inventoryItems);

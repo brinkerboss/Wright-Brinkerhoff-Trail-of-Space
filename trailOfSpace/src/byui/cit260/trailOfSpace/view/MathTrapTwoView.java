@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author landonwright
  */
-public class MathTrapTwoView {
+public class MathTrapTwoView extends View {
     
     public void displayMathTrap() {
     
@@ -26,14 +26,14 @@ public class MathTrapTwoView {
     
     public String getInput() {
             boolean valid = false;
-            Scanner keyboard = new Scanner(System.in);
+            
         
             String input = null;
-        
+            try {
             while(!valid) {
             
            
-                input = keyboard.nextLine();
+                input = this.keyboard.readLine();
                 input = input.toUpperCase();
                 input = input.trim();
         
@@ -46,6 +46,9 @@ public class MathTrapTwoView {
                 }
             break;
         
+            }
+            } catch (Exception e) {
+                System.out.println("Error reading input: " + e.getMessage());
             }
             return input;
         }

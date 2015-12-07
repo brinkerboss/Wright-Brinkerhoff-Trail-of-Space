@@ -30,6 +30,7 @@ public class GameMenuView extends View {
             + "\nU - Upgrade"
             + "\nH - Help"
             + "\nP - Display strongest item in inventory"
+            + "\nR - Display actor report"
             + "\nQ - Quit"
             + "\n-----------------------------------------------------"
             + "\n"
@@ -70,10 +71,14 @@ public class GameMenuView extends View {
             case 'P':
                 InventoryControl.displayMostPotentItem();
                 break;
+            case 'R':
+                TrailOfSpace.ActorsReportView.display();
+                ActorsReportView.printReport();
             case 'Q':
                 return false;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                            "*** Invalid selection *** Try again");
                 break;
         }
         return true;
@@ -82,11 +87,11 @@ public class GameMenuView extends View {
     private void viewInventory() {
         
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
-        System.out.println("\nList of Inventory Items");
-        System.out.println("Description" + "\t" + "Quantity");
+        this.console.println("\nList of Inventory Items");
+        this.console.println("Description" + "\t" + "Quantity");
         
         for (InventoryItem inventoryItem : inventory) {
-            System.out.println(inventoryItem.getDescription() + "\t   " +
+            this.console.println(inventoryItem.getDescription() + "\t   " +
                                 inventoryItem.getQuantity());
         }
         

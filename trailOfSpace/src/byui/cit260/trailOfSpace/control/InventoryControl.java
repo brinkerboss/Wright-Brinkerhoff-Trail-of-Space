@@ -5,13 +5,14 @@
  */
 package byui.cit260.trailOfSpace.control;
 
+import byui.cit260.trailOfSpace.view.View;
 import trailofspace.TrailOfSpace;
 
 /**
  *
  * @author landonwright
  */
-public class InventoryControl {
+public class InventoryControl extends View {
   
     
     public void addToInventory(String inventoryItem, int amount) {
@@ -43,7 +44,7 @@ public class InventoryControl {
         
         InventoryItem item = getMostPotentItem();
         
-        System.out.println("Your Best Item is : " + item.getDescription());
+        this.console.println("Your Best Item is : " + item.getDescription());
     }
     
 }

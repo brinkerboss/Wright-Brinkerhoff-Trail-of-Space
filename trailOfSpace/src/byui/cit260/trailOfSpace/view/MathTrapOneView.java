@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author landonwright
  */
-public class MathTrapOneView {
+public class MathTrapOneView extends View{
     
     
         public void displayMathTrap() {
@@ -26,20 +26,18 @@ public class MathTrapOneView {
             
             
             
-            this.getInput(solution);
-            
         }
     
     public String getInput(int solution) {
             boolean valid = false;
-            Scanner keyboard = new Scanner(System.in);
+            
         
             String input = null;
-        
+        try {
             while(!valid) {
             
            
-                input = keyboard.nextLine();
+                input = this.keyboard.readLine();
                 input = input.toUpperCase();
                 input = input.trim();
         
@@ -54,6 +52,9 @@ public class MathTrapOneView {
             
             continue;
         
+            }
+            } catch (Exception e) {
+                System.out.println("Error reading input: " + e.getMessage());
             }
             return input;
         }

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  *
  * @author animejedifreak
  */
-public class BattleControlTest {
+public class BattleControlTest extends View {
     
     public BattleControlTest() {
     }
@@ -31,10 +31,10 @@ public class BattleControlTest {
      */
     @org.junit.Test
     public void testCalcOutcome() {
-        System.out.println("calcOutcome");
+        this.console.println("calcOutcome");
         
         //Test case 1
-        System.out.println("Test Case 1");
+        this.console.println("Test Case 1");
         int characterHealth = 100;
         int characterAttack = 30;
         int enemyHealth = 70;
@@ -47,7 +47,7 @@ public class BattleControlTest {
         //fail("The test case is a prototype.");
         
         //Test case 2
-        System.out.println("Test Case 2");
+        this.console.println("Test Case 2");
         characterHealth = -200;
         characterAttack = 45;
         enemyHealth = 53;
@@ -57,7 +57,7 @@ public class BattleControlTest {
         assertEquals(expResult, result);
         
         //Test case 3
-        System.out.println("Test Case 3");
+        this.console.println("Test Case 3");
         characterHealth = 1;
         characterAttack = 499;
         enemyHealth = 1;
